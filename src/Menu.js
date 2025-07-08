@@ -1,6 +1,31 @@
+import { useState, useEffect } from 'react';
 import { addToCart } from './cartUtils';
 
 function Menu() {
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    updateTotal();
+  }, []);
+
+  function updateTotal() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const sum = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+    setTotal(sum.toFixed(2));
+  }
+
+  function handleAdd(dish) {
+    addToCart(dish.name, dish.price);
+    updateTotal();
+    alert(`${dish.name} added to cart!`);
+  }
+
+  function clearCart() {
+    localStorage.removeItem('cart');
+    setTotal(0);
+    alert('Cart cleared!');
+  }
+
   return (
     <>
       <section style={sectionStyle}>
@@ -11,14 +36,7 @@ function Menu() {
               <img src={dish.img} alt={dish.name} style={imgStyle} />
               <h3>{dish.name} - ${dish.price}</h3>
               <p>{dish.desc}</p>
-              <button
-                onClick={() => {
-                  addToCart(dish.name, dish.price);
-                  alert(`${dish.name} added to cart!`);
-                }}
-              >
-                Add to Cart
-              </button>
+              <button onClick={() => handleAdd(dish)}>Add to Cart</button>
             </div>
           ))}
         </div>
@@ -26,15 +44,8 @@ function Menu() {
 
       <section style={sectionStyle}>
         <h2>🛒 Your Cart</h2>
-        <p><strong>Total: $<span id="total-price">0.00</span></strong></p>
-        <button
-          onClick={() => {
-            localStorage.removeItem('cart');
-            alert('Cart cleared!');
-          }}
-        >
-          Clear Cart
-        </button>
+        <p><strong>Total: ${total}</strong></p>
+        <button onClick={clearCart}>Clear Cart</button>
         <a href="/checkout">
           <button style={{ marginTop: '10px' }}>Go to Checkout</button>
         </a>
