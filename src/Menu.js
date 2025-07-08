@@ -3,17 +3,6 @@ import { addToCart } from './cartUtils';
 function Menu() {
   return (
     <>
-      <header style={{ textAlign: 'center', padding: '20px', backgroundColor: '#d32f2f', color: 'white' }}>
-        <h1>Our Menu</h1>
-      </header>
-
-      <nav style={navStyle}>
-        <a href="/" style={navLinkStyle}>Home</a>
-        <a href="/menu" style={navLinkStyle}>Menu</a>
-        <a href="/about" style={navLinkStyle}>About</a>
-        <a href="/contact" style={navLinkStyle}>Contact</a>
-      </nav>
-
       <section style={sectionStyle}>
         <h2 style={headingStyle}>Dishes We Serve</h2>
         <div style={gridStyle}>
@@ -92,20 +81,6 @@ const dishes = [
     desc: "Soft, syrup-soaked dessert balls for a sweet finish.",
   },
 ];
-
-const navStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  backgroundColor: '#b71c1c',
-  padding: '10px 0',
-};
-
-const navLinkStyle = {
-  color: 'white',
-  margin: '0 20px',
-  textDecoration: 'none',
-  fontWeight: 'bold',
-};
 
 const sectionStyle = {
   maxWidth: '1000px',
