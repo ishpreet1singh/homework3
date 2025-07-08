@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# homework3 — Ishpreet's Restaurant React Project
+
+This is a React-based restaurant website for **Ishpreet’s Restaurant**. The site includes an interactive menu, shopping cart functionality, and a checkout page. Routing is handled using **React Router**.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---
+
+## 🚀 Features
+
+- 🧭 Navigation between Home, Menu, About, Contact, and Checkout pages
+- 🛒 Dynamic shopping cart with add/remove/clear functionality
+- 🧮 Real-time subtotal, tax (5%), and grand total calculations
+- 📦 LocalStorage support to persist cart data
+- 🔁 React Router integration for seamless routing
+
+---
+
+## 📂 Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode.  
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
+The page will reload on changes and show lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.  
+More: [Running Tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `build/` folder.  
+It bundles React in production mode and optimizes the build for best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+More: [Deployment Docs](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**⚠️ Warning:** This is a one-way operation.  
+Once you `eject`, you can’t go back!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+It exposes the build configuration to give you full control.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📚 Learn More
 
-## Learn More
+- [React Documentation](https://reactjs.org/)
+- [Create React App Docs](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React Router Docs](https://reactrouter.com/)
+- [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Making a PWA](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deployment
 
-### Code Splitting
+This app is intended to be deployed via **Netlify**. After pushing to GitHub:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Go to [Netlify](https://www.netlify.com/)
+2. Connect your GitHub repo
+3. Set the build command: `npm run build`
+4. Set the publish directory: `build`
+5. Click **Deploy Site**
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✅ Built with love by Ishpreet using **React**, styled with **CSS**, and deployed using **Netlify**.
